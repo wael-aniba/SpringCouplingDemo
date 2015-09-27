@@ -1,7 +1,8 @@
 package edu.esprit.presentation;
 
-import edu.esprit.dao.DaoImpl;
-import edu.esprit.service.ServiceImpl;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import edu.esprit.service.IService;
 
 public class Presentation {
 
@@ -9,12 +10,9 @@ public class Presentation {
 
 		Double[] params = { 0d, 1d, 2d, 3d, 4d };
 
-		DaoImpl dao = new DaoImpl();
-		ServiceImpl service = new ServiceImpl();
-		service.setDao(dao);
-
+		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+		IService service = (IService) ctx.getBean("service");
 		Double result = service.doubleAvg(params);
-
 		System.out.println("AVERAGE: " + result);
 
 	}
