@@ -1,8 +1,8 @@
 package edu.esprit.dao;
 
-public class DaoImpl {
+public class DaoImpl implements IDao {
 	
-	
+	@Override
 	public Double doubleSum(Double... args){
 		
 		Double sum = 0d;
