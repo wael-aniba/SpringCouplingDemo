@@ -1,10 +1,11 @@
 package edu.esprit.dao;
 
-public class DaoImpl implements IDao {
+public class DaoImpl1 implements IDao {
 	
 	@Override
 	public Double doubleSum(Double... args){
 		
+		System.out.println("*** Sum calculation using classic approach ***");
 		Double sum = 0d;
 		
 		for (Double d : args) {
