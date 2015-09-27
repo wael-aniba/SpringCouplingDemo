@@ -2,7 +2,7 @@ package edu.esprit.dao;
 
 public class DaoImpl {
 	
-	
+	//aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 	public Double doubleSum(Double... args){
 		
 		Double sum = 0d;
