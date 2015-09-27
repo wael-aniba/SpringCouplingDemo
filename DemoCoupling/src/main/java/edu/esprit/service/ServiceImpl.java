@@ -10,6 +10,11 @@ public class ServiceImpl implements IService {
 	public ServiceImpl() {
 		
 	}
+	
+	public ServiceImpl(IDao dao) {
+		super();
+		this.dao = dao;
+	}
 
 	public IDao getDao() {
 		return dao;

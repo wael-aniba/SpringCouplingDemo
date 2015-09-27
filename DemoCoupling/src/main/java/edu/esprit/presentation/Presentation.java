@@ -9,10 +9,16 @@ public class Presentation {
 
 		Double[] params = { 0d, 1d, 2d, 3d, 4d };
 
-		DaoImpl dao = new DaoImpl();
-		ServiceImpl service = new ServiceImpl();
-		service.setDao(dao);
+		//Static Injection via setter
+//		DaoImpl dao = new DaoImpl();
+//		ServiceImpl service = new ServiceImpl();
+//		service.setDao(dao);
 
+		//Static Injection via constructor
+		DaoImpl dao = new DaoImpl();
+		ServiceImpl service = new ServiceImpl(dao);
+
+		
 		Double result = service.doubleAvg(params);
 
 		System.out.println("AVERAGE: " + result);
